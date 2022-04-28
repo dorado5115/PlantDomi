@@ -1,6 +1,6 @@
-# actividad13
+# Plant Domi
 
-A new Flutter project.
+Este es un proyecto de plantas domésticas, una tienda en línea de plantas.
 
 ## Getting Started
 
