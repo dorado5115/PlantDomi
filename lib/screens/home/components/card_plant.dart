@@ -21,34 +21,34 @@ class CardPlant extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return Container(
-      margin: EdgeInsets.only(
-          left: kDefaultPadding,
-          top: kDefaultPadding / 2,
-          bottom: kDefaultPadding * 2.5),
-      width: size.width * 0.4,
-      child: Column(children: <Widget>[
-        Container(
-          padding: EdgeInsets.only(
-              top: kDefaultPadding - 8,
-              left: kDefaultPadding,
-              right: kDefaultPadding,
-              bottom: kDefaultPadding - 8),
-          decoration: BoxDecoration(
-            color: color,
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(10),
-              topLeft: Radius.circular(10),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        margin: EdgeInsets.only(
+            left: kDefaultPadding,
+            top: kDefaultPadding / 2,
+            bottom: kDefaultPadding * 2.5),
+        width: size.width * 0.4,
+        child: Column(children: <Widget>[
+          Container(
+            padding: EdgeInsets.only(
+                top: kDefaultPadding - 8,
+                left: kDefaultPadding,
+                right: kDefaultPadding,
+                bottom: kDefaultPadding - 8),
+            decoration: BoxDecoration(
+              color: color,
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(10),
+                topLeft: Radius.circular(10),
+              ),
+            ),
+            child: Image.asset(
+              image,
+              fit: BoxFit.cover,
             ),
           ),
-          child: Image.asset(
-            image,
-            fit: BoxFit.cover,
-          ),
-        ),
-        GestureDetector(
-          onTap: onTap,
-          child: Container(
+          Container(
             padding: EdgeInsets.all(kDefaultPadding / 2),
             decoration: BoxDecoration(
               color: kBackgroundColor,
@@ -100,8 +100,8 @@ class CardPlant extends StatelessWidget {
               ],
             ),
           ),
-        )
-      ]),
+        ]),
+      ),
     );
   }
 }

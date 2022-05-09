@@ -5,6 +5,13 @@ import 'code_cupon.dart';
 import 'detail_shop_cart.dart';
 import 'shopping_cart.dart';
 
+/**
+ * 
+ * En el shopping bag se renderiza una lista de productos que se agregan al carrito de compras.
+ * El codigo de cupon.
+ * El subtotal, envio, total y el boton para proceder al checkout
+ */
+
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
 

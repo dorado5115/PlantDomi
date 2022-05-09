@@ -9,9 +9,10 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  // Este widget es la raiz de la aplicación.
   @override
   Widget build(BuildContext context) {
+    /*Aqui empieza la aplicacion renderizando HomePageStateful */
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Plant Domi',

@@ -1,6 +1,12 @@
 import 'package:actividad13/constants.dart';
 import 'package:flutter/material.dart';
 
+/*
+  Aqui se renderiza una pagina que se abre cuando presionas el boton de Buscar
+  en la pantalla de Home.
+  Aqui se renderiza una barra de busqueda y una lista de resultados de busqueda.
+ */
+
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
 

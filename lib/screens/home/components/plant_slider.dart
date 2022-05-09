@@ -23,7 +23,13 @@ class PlantSlider extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetailsPageStateful(),
+                  builder: (context) => DetailsPageStateful(
+                    image: "assets/images/mac.png",
+                    title: "Abedul",
+                    description: "Requiere mucho sol",
+                    price: 299,
+                    color: kPlant1Color,
+                  ),
                 ),
               );
             },
@@ -38,7 +44,13 @@ class PlantSlider extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetailsPageStateful(),
+                  builder: (context) => DetailsPageStateful(
+                    image: "assets/images/arb.png",
+                    title: "Acal",
+                    description: "Requiere poco sol",
+                    price: 299,
+                    color: kPlant2Color,
+                  ),
                 ),
               );
             },
@@ -53,7 +65,13 @@ class PlantSlider extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetailsPageStateful(),
+                  builder: (context) => DetailsPageStateful(
+                    image: "assets/images/flowers.png",
+                    title: "Acebo",
+                    description: "Requiere poco sol",
+                    price: 299,
+                    color: kPlant3Color,
+                  ),
                 ),
               );
             },

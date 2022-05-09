@@ -12,6 +12,16 @@ class HomePageStateful extends StatefulWidget {
   State<HomePageStateful> createState() => _HomePageStatefulState();
 }
 
+/*
+  Aqui se empieza renderizando el appbar, el body y el bottomNavBar
+  de la pantalla home que es la inicial, 
+  el bottomNavbar lo manejo con stateful porque necesito que se actualice
+  cuando se presiones un boton de los iconos que se aparecen,
+  y con esto se cambia el contenido de la pantalla.
+
+  El drawer es una barra lateral que se muestra cuando se presiona el boton
+  de menu.
+ */
 class _HomePageStatefulState extends State<HomePageStateful> {
   int pageIndex = 0;
 

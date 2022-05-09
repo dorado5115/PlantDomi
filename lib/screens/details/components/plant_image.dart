@@ -5,9 +5,13 @@ class PlantImage extends StatelessWidget {
   const PlantImage({
     Key? key,
     required this.size,
+    required this.image,
+    required this.color,
   }) : super(key: key);
 
   final Size size;
+  final String image;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +22,7 @@ class PlantImage extends StatelessWidget {
           child: Container(
             padding: EdgeInsets.only(top: kDefaultPadding),
             decoration: BoxDecoration(
-              color: kPlant1Color,
+              color: color,
             ),
             child: Align(
               alignment: Alignment.topLeft,
@@ -35,10 +39,10 @@ class PlantImage extends StatelessWidget {
           height: size.height * 0.50,
           width: size.width,
           decoration: BoxDecoration(
-            color: kPlant1Color,
+            color: color,
           ),
           child: Image.asset(
-            "assets/images/arbG.png",
+            image,
             fit: BoxFit.contain,
           ),
         ),

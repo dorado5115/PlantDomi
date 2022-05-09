@@ -4,9 +4,25 @@ import 'package:flutter/material.dart';
 import '../../components/plant_image.dart';
 import '../../components/plant_price_title.dart';
 import 'plant_description_part.dart';
+/*
+  Aqui se renderiza la imagen de la planta y los cuidados de la misma.
+ */
 
 class Body extends StatelessWidget {
-  const Body({Key? key}) : super(key: key);
+  const Body(
+      {Key? key,
+      required this.image,
+      required this.title,
+      required this.description,
+      required this.price,
+      required this.color})
+      : super(key: key);
+
+  final String image;
+  final String title;
+  final String description;
+  final int price;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +30,15 @@ class Body extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          PlantImage(size: size),
-          PriceAndTitle(),
+          PlantImage(
+            size: size,
+            image: image,
+            color: color,
+          ),
+          PriceAndTitle(
+            title: title,
+            price: price,
+          ),
           Container(
             padding: EdgeInsets.all(kDefaultPadding),
             child: Column(

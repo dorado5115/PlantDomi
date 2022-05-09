@@ -7,15 +7,24 @@ class PlantDescription extends StatelessWidget {
   const PlantDescription({
     Key? key,
     required this.size,
+    required this.title,
+    required this.price,
   }) : super(key: key);
 
   final Size size;
+
+  /*Es para PriceAndTitle */
+  final String title;
+  final int price;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        PriceAndTitle(),
+        PriceAndTitle(
+          price: price,
+          title: title,
+        ),
         Container(
           padding: EdgeInsets.all(kDefaultPadding),
           child: Column(
